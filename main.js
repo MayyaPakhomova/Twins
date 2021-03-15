@@ -164,7 +164,7 @@ function createСards(cardCount) {
     }
     let img = document.createElement("img");
     img.classList = "picture";
-    img.setAttribute("src", "img/" + myImages[i] + ".png");
+    img.setAttribute("src", "img/" + myImages[i] + ".svg");
     let imgBack = document.createElement("img");
     imgBack.classList = "back";
     imgBack.setAttribute("src", "img/772.jpg");
