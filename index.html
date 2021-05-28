@@ -6,31 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twins</title>
- 
+
   <link rel="stylesheet" href="main.css">
- 
+
 
 </head>
 
 <body>
   <div class="container">
-  <section class="choice">
-  <div>
-    <div class="text">Введите количество карточек по горизонтали</div>
-    <input class="enter-a-number" type="number" placeholder="Четное число от 2 до 10">
-    <button class="btn btn-begin"disabled>Выбрать и начать!</button>
-  </div>
-  <button class="btn-replay">Сыграть еще раз?</button>
-  <div>
-   <div class="stopwatch"> <span id="seconds"class="stopwatch">00</span>.<span id="milliseconds">00</span></div>
-  <button class="btn btn-stopwatch-start">Собрать за минуту</button>
-  </div>
+    <section class="choice">
+      <form>
+        <div class="text">Введите количество карточек по горизонтали</div>
+        <input class="enter-a-number" type="number" placeholder="Четное число от 2 до 10">
+        <button class="btn btn-begin" disabled>Выбрать и начать!</button>
+      </form>
+      <div class="timer">
+        <div class="stopwatch"> <span id="seconds" class="stopwatch">00</span>.<span id="milliseconds">00</span></div>
+        <button class="btn btn-stopwatch-start">Собрать за минуту</button>
+      </div>
     </section>
-  <section class="card-deck">
-    <button class="btn-win">Победа!</button>
-  </section>
-</div>
- <script src="main.js"></script>
+    <section class="card-deck">
+
+    </section>
+    <button class="btn-win"></button>
+  </div>
+  <script src="main.js"></script>
 </body>
 
 </html>

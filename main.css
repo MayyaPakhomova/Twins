@@ -1,4 +1,5 @@
 body {
+  position         : relative;
   min-width        : 320px;
   max-width        : 100%;
   height           : 100vh;
@@ -41,7 +42,6 @@ body {
 .playing-card {
   flex           : 0 0 23%;
   margin         : 5px;
-  position       : relative;
   transform      : scale(1);
   transform-style: preserve-3d;
   transition     : transform .5s;
@@ -98,7 +98,6 @@ body {
   font-weight       : 700;
   line-height       : 1.3;
   padding           : .6em 1.4em .5em .8em;
-  width             : 100%;
   max-width         : 100%;
   margin-right      : auto;
   margin-top        : 10px;
@@ -148,26 +147,6 @@ body {
 
 }
 
-.btn-replay {
-  display            : none;
-  font-weight        : 700;
-  line-height        : 1.3;
-  font-size          : 24px;
-  padding            : .6em 1.4em .5em .8em;
-  margin-top         : 10px;
-  width              : 100%;
-  box-sizing         : border-box;
-  border             : 1px solid #aaa;
-  box-shadow         : 0 0 1px 3px #79ae5e;
-  border-radius      : .5em;
-  outline            : none;
-  appearance         : none;
-  background-color   : #fff;
-  color              : #79ae5e;
-  cursor             : pointer;
-}
-
-
 .btn:hover {
   box-shadow: 0 0 1px 3px #79ae5e;
 }
@@ -188,24 +167,27 @@ body {
 }
 
 .btn-win {
-  position           : absolute;
-  display            : none;
-  font-weight        : 700;
-  line-height        : 1.3;
-  font-size          : 24px;
-  padding            : .8em 1.4em .8em .8em;
-  /* margin             : 5px; */
-  margin-top         : 124px;
-  width              : 100%;
-  box-sizing         : border-box;
-  border             : 1px solid #aaa;
-  border-radius      : .5em;
-  outline            : none;
-  -moz-appearance    : none;
-  -webkit-appearance : none;
-  appearance         : none;
-  background-color   : #fff;
-  color              : #79ae5e;
-  cursor             : pointer;
-  z-index            : 100;
+  position        : absolute;
+  display         : none;
+  font-weight     : 700;
+  font-size       : 100px;
+  width           : 100%;
+  height          : 100%;
+  box-sizing      : border-box;
+  background-color: rgba(255, 255, 255, .8);
+  color           : #79ae5e;
+  cursor          : pointer;
+  z-index         : 1000;
+}
+
+.btn-win.active {
+  display: block;
+}
+
+.timer {
+  display: none;
+}
+
+.timer.active {
+  display: block;
 }
