@@ -122,6 +122,7 @@ function shuffleImages(img) {
 const enterNumber = document.querySelector('.enter-a-number');
 const buttonBegin = document.querySelector('.btn-begin');
 const cardDeck = document.querySelector('.card-deck');
+const noCard = document.querySelector('.no-card');
 
 const stopwatchStart = document.querySelector('.btn-stopwatch-start');
 const stopwatchOut = document.querySelector('.stopwatch');
@@ -165,14 +166,6 @@ function createСards(cardCount) {
   }
 }
 
-enterNumber.addEventListener('input', function (e) {
-  if (e.target.value === '') {
-    buttonBegin.disabled = true;
-  } else {
-    buttonBegin.disabled = false;
-  }
-});
-
 function numberOfCards() {
   if (enterNumber.value) {
     if (
@@ -188,6 +181,14 @@ function numberOfCards() {
 
 buttonBegin.addEventListener('click', (e) => {
   timer.classList.add('active');
+
+  if (enterNumber.value == '') {
+    noCard.classList.add('active');
+    console.log(12);
+  }else{
+    noCard.classList.remove('active');
+  }
+
   shuffleImages(images);
   cardDeck.textContent = '';
   e.preventDefault();

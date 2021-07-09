@@ -191,3 +191,11 @@ body {
 .timer.active {
   display: block;
 }
+
+.no-card{
+  display: none;
+  text-align: center;
+}
+.no-card.active{
+  display: block;
+}
