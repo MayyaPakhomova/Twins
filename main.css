@@ -1,1 +1,270 @@
-body{position:relative;min-width:320px;max-width:100%;height:100vh;font-size:16px;font-weight:400;line-height:32px;color:#848484;background-image:url(img/i.jpg);background-repeat:no-repeat;background-size:cover}*{padding:0;margin:0;box-sizing:border-box}.container{max-width:1500px;margin:0 auto;padding-top:20px}.wrapper{display:flex;justify-content:space-between}.card-deck{max-width:640px;width:100%;height:640px;display:flex;flex-wrap:wrap;perspective:1000px}.playing-card{flex:0 0 23%;margin:5px;transform:scale(1);transform-style:preserve-3d;transition:transform .3s}.playing-card-two{flex:0 0 48%}.playing-card-six{flex:0 0 15%}.playing-card-eight{flex:0 0 10%}.playing-card-ten{flex:0 0 8%}.back,.picture{width:100%;height:100%;position:absolute;border-radius:5px}.picture{transform:rotateY(180deg);background-color:#79ae5e}.playing-card:active{transform:scale(.97);transition:transform .2s}.playing-card.flip{transform:rotateY(180deg)}.choice{display:flex;flex:0 0 20%;flex-direction:column;justify-content:space-between;padding:10px;margin-right:20px}.enter-a-number{font-weight:700;line-height:1.3;padding:.6em 1.4em .5em .8em;max-width:100%;margin-right:auto;margin-top:10px;border:1px solid #aaa;border-radius:.5em;outline:0;appearance:none;color:#848484}.enter-a-number::placeholder{text-align:center}.enter-a-number:hover{box-shadow:0 0 1px 3px #79ae5e}.enter-a-number:focus{border-color:#aaa;box-shadow:0 0 1px 3px #79ae5e;outline:0}.btn{display:block;font-weight:700;line-height:1.3;font-size:1.5em;padding:.6em 1.4em .5em .8em;margin-top:10px;width:100%;border:1px solid #aaa;box-shadow:0 1px 0 1px rgba(0,0,0,.04);border-radius:.5em;outline:0;appearance:none;background-color:#fff;background-position:right .7em top 50%,0 0;background-size:.65em auto,100%;color:#848484;cursor:pointer}.btn:hover{box-shadow:0 0 1px 3px #79ae5e}.text{font-weight:700;line-height:1.3;font-size:1.5em;text-align:center}.stopwatch{color:#848484;font-weight:700;line-height:1.3;font-size:2em;text-align:center}.btn-win{position:absolute;display:none;font-weight:700;font-size:6em;top:0;left:0;width:100vw;height:100vh;background-color:rgba(255,255,255,.8);text-align:center;color:#79ae5e;cursor:pointer;z-index:1000}.btn-win.active{display:block}.timer{display:none}.timer.active{display:block}.no-card{display:none;text-align:center;margin-top:10px}.no-card.active{display:block}@media(max-width:1500px){body{font-size:14px}.container{max-width:1050px}}@media(max-width:1024px){body{font-size:10px}.container{max-width:750px;padding-top:10px}}@media(max-width:768px){.container{max-width:600px}.card-deck{max-width:400px;height:400px}.playing-card{margin:2px}.choice{flex:0 0 20%;padding:5px;margin-right:10px}.btn{padding:.6em}}@media(max-width:630px){.wrapper{flex-direction:column}.timer{margin:20px 0}.card-deck{margin:0 auto}}@media(max-width:500px){.container{max-width:350px}.card-deck{max-width:300px;height:300px}}
+body {
+  position         : relative;
+  min-width        : 320px;
+  max-width        : 100%;
+  height           : 100vh;
+  font-size        : 16px;
+  font-weight      : 400;
+  line-height      : 32px;
+  color            : #848484;
+  background-image : url(img/i.jpg);
+  background-repeat: no-repeat;
+  background-size  : cover
+}
+
+* {
+  padding   : 0;
+  margin    : 0;
+  box-sizing: border-box
+}
+
+.container {
+  max-width  : 1500px;
+  margin     : 0 auto;
+  padding-top: 20px
+}
+
+.wrapper {
+  display        : flex;
+  justify-content: space-between
+}
+
+.card-deck {
+  max-width  : 640px;
+  width      : 100%;
+  height     : 640px;
+  display    : flex;
+  flex-wrap  : wrap;
+  perspective: 1000px
+}
+
+.playing-card {
+  flex           : 0 0 23%;
+  margin         : 5px;
+  transform      : scale(1);
+  transform-style: preserve-3d;
+  transition     : transform .3s
+}
+
+.playing-card-two {
+  flex: 0 0 48%
+}
+
+.playing-card-six {
+  flex: 0 0 15%
+}
+
+.playing-card-eight {
+  flex: 0 0 10%
+}
+
+.playing-card-ten {
+  flex: 0 0 8%
+}
+
+.back,
+.picture {
+  width        : 100%;
+  height       : 100%;
+  position     : absolute;
+  border-radius: 5px
+}
+
+.picture {
+  transform       : rotateY(180deg);
+  background-color: #79ae5e
+}
+
+.playing-card:active {
+  transform : scale(.97);
+  transition: transform .2s
+}
+
+.playing-card.flip {
+  transform: rotateY(180deg)
+}
+
+.choice {
+  display        : flex;
+  flex           : 0 0 20%;
+  flex-direction : column;
+  justify-content: space-between;
+  padding        : 10px;
+  margin-right   : 20px
+}
+
+.enter-a-number {
+  font-weight  : 700;
+  line-height  : 1.3;
+  padding      : .6em 1.4em .5em .8em;
+  max-width    : 100%;
+  margin-right : auto;
+  margin-top   : 10px;
+  border       : 1px solid #aaa;
+  border-radius: .5em;
+  outline      : 0;
+  appearance   : none;
+  color        : #848484
+}
+
+.enter-a-number::placeholder {
+  text-align: center
+}
+
+.enter-a-number:hover {
+  box-shadow: 0 0 1px 3px #79ae5e
+}
+
+.enter-a-number:focus {
+  border-color: #aaa;
+  box-shadow  : 0 0 1px 3px #79ae5e;
+  outline     : 0
+}
+
+.btn {
+  display            : block;
+  font-weight        : 700;
+  line-height        : 1.3;
+  font-size          : 1.5em;
+  padding            : .6em 1.4em .5em .8em;
+  margin-top         : 10px;
+  width              : 100%;
+  border             : 1px solid #aaa;
+  box-shadow         : 0 1px 0 1px rgba(0, 0, 0, .04);
+  border-radius      : .5em;
+  outline            : 0;
+  appearance         : none;
+  background-color   : #fff;
+  background-position: right .7em top 50%, 0 0;
+  background-size    : .65em auto, 100%;
+  color              : #848484;
+  cursor             : pointer
+}
+
+.btn:hover {
+  box-shadow: 0 0 1px 3px #79ae5e
+}
+
+.text {
+  font-weight: 700;
+  line-height: 1.3;
+  font-size  : 1.5em;
+  text-align : center
+}
+
+.stopwatch {
+  color      : #848484;
+  font-weight: 700;
+  line-height: 1.3;
+  font-size  : 2em;
+  text-align : center
+}
+
+.btn-win {
+  position        : absolute;
+  display         : none;
+  font-weight     : 700;
+  font-size       : 6em;
+  top             : 0;
+  left            : 0;
+  width           : 100vw;
+  height          : 100vh;
+  background-color: rgba(255, 255, 255, .8);
+  text-align      : center;
+  color           : #79ae5e;
+  cursor          : pointer;
+  z-index         : 1000
+}
+
+.btn-win.active {
+  display: block
+}
+
+.timer {
+  display: none
+}
+
+.timer.active {
+  display: block
+}
+
+.no-card {
+  display   : none;
+  text-align: center;
+  margin-top: 10px
+}
+
+.no-card.active {
+  display: block
+}
+
+@media(max-width:1500px) {
+  body {
+    font-size: 14px
+  }
+
+  .container {
+    max-width: 1050px
+  }
+}
+
+@media(max-width:1024px) {
+  body {
+    font-size: 10px
+  }
+
+  .container {
+    max-width  : 750px;
+    padding-top: 10px
+  }
+}
+
+@media(max-width:768px) {
+  .container {
+    max-width: 600px
+  }
+
+  .card-deck {
+    max-width: 400px;
+    height   : 400px
+  }
+
+  .playing-card {
+    margin: 2px
+  }
+
+  .choice {
+    flex        : 0 0 20%;
+    padding     : 5px;
+    margin-right: 10px
+  }
+
+  .btn {
+    padding: .6em
+  }
+}
+
+@media(max-width:630px) {
+  .wrapper {
+    flex-direction: column
+  }
+
+  .timer {
+    margin: 20px 0
+  }
+
+  .card-deck {
+    margin: 0 auto
+  }
+}
+
+@media(max-width:500px) {
+  .container {
+    max-width: 350px
+  }
+
+  .card-deck {
+    max-width: 300px;
+    height   : 300px
+  }
+}
